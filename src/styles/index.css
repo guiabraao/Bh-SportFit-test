@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-display: "Bricolage Grotesque", "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-background: #0a0a0a;
+  --color-surface: #101210;
+  --color-surface-2: #14150f;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+  --color-primary: #aee000;
+  --color-primary-dark: #86ad14;
+  --color-primary-soft: #d4f24d;
+  --color-text: #f5f6f2;
+  --color-muted: #9a9d95;
+  --color-muted-2: #6d6f68;
+  --color-glow: rgba(174, 224, 0, 0.35);
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #262822;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px var(--color-glow);
+}
+
+.container-xl {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-xl {
+    padding-inline: 3rem;
+  }
+}
+
+/* Visible focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,153 @@
+.objectives {
+  position: relative;
+  background: var(--color-background);
+  padding-block: 6rem;
+}
+
+@media (min-width: 1024px) {
+  .objectives {
+    padding-block: 7rem;
+  }
+}
+
+.objectives__title {
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  max-width: 42rem;
+}
+
+.objectives__title-accent {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.objectives__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .objectives__layout {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3.5rem;
+  }
+}
+
+.objectives__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.objectives__lead {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+@media (min-width: 640px) {
+  .objectives__lead {
+    font-size: 2.25rem;
+  }
+}
+
+.objectives__lead-accent {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.objectives__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .objectives__grid {
+    gap: 1.25rem;
+  }
+}
+
+.objectives__card {
+  position: relative;
+  aspect-ratio: 4 / 3.1;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .objectives__card {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.objectives__card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease-out;
+}
+
+.objectives__card:hover .objectives__card-img {
+  transform: scale(1.1);
+}
+
+.objectives__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+.objectives__card-content {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .objectives__card-content {
+    padding: 1.25rem;
+  }
+}
+
+.objectives__card-title {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+@media (min-width: 640px) {
+  .objectives__card-title {
+    font-size: 1rem;
+  }
+}
+
+.objectives__card-title--primary {
+  color: var(--color-primary);
+}
+
+.objectives__card-desc {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  .objectives__card-desc {
+    font-size: 13px;
+  }
+}

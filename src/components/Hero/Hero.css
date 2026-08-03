@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-background);
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__bg-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.4;
+}
+
+.hero__bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.8),
+    rgba(10, 10, 10, 0.7),
+    var(--color-background)
+  );
+}
+
+.hero__bg-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(174, 224, 0, 0.08), transparent 60%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  margin-bottom: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-primary);
+  backdrop-filter: blur(4px);
+}
+
+.hero__title {
+  max-width: 56rem;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 4.2rem;
+  }
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__accent {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.hero__accent--medium {
+  font-weight: 500;
+}
+
+.hero__description {
+  margin-top: 1.75rem;
+  max-width: 42rem;
+  text-wrap: balance;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  .hero__description {
+    font-size: 1.125rem;
+  }
+}
+
+.hero__actions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .hero__actions {
+    flex-direction: row;
+  }
+}

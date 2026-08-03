@@ -1,0 +1,127 @@
+.navbar {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .navbar__row {
+    padding-block: 1.25rem;
+  }
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__brand img{
+  width: 50px;
+}
+
+
+.navbar__links {
+  display: none;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .navbar__links {
+    display: flex;
+  }
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-primary);
+}
+
+.navbar__cta {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar__cta {
+    display: block;
+  }
+}
+
+.navbar__toggle {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .navbar__toggle {
+    display: none;
+  }
+}
+
+.navbar__mobile-menu {
+  border-top: 1px solid var(--color-border);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+@media (min-width: 1024px) {
+  .navbar__mobile-menu {
+    display: none;
+  }
+}
+
+.navbar__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-block: 1rem;
+}
+
+.navbar__mobile-link {
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__mobile-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-primary);
+}
+
+.navbar__mobile-cta {
+  margin-top: 0.5rem;
+  width: 100%;
+}
