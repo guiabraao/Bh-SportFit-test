@@ -67,9 +67,10 @@
   gap: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .objectives__grid {
-    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
   }
 }
 

@@ -29,17 +29,12 @@
   color: transparent;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .plans__watermark {
-    font-size: 8rem;
+    font-size: clamp(2rem, 12vw, 9rem);
   }
 }
 
-@media (min-width: 1024px) {
-  .plans__watermark {
-    font-size: 10rem;
-  }
-}
 
 .plans__inner {
   position: relative;
